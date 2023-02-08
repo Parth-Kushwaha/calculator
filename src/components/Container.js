@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Container.css'
 function Container() {
-    const [results,setResults]=useState("")
   return (
     <div className='calculator-grid'>
       <div className='output'>
