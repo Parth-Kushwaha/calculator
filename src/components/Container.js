@@ -13,8 +13,8 @@ function Container() {
         <div className="previous-operand">123</div>
         <div className="current-operand">{result}</div>
       </div>
-        <button   onClick={handleClick} className='span-two'>AC</button>
-        <button   onClick={handleClick}>DEL</button>
+        <button id='clear' onClick={()=> setResult('')} className='span-two'>AC</button>
+        <button id='backspace' onClick={()=> setResult(result.slice(0, result.length-1))}>DEL</button>
         <button name='÷'  onClick={handleClick}>&divide;</button>
         <button name='1'  onClick={handleClick}>1</button>
         <button name='2'  onClick={handleClick}>2</button>
