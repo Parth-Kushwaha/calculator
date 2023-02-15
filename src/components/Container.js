@@ -7,10 +7,18 @@ function Container() {
   const handleClick=(e)=>{
     setResult(result.concat(e.target.name))
   }
+
+  const evaluate=()=>{
+    try {
+      setResult(eval(result).toString())
+    } catch (error) {
+      setResult("Error!")
+    }
+  }
   return (
     <div className='calculator-grid'>
       <div className='output'>
-        <div className="previous-operand">123</div>
+        {/* <div className="previous-operand">123</div> */}
         <div className="current-operand">{result}</div>
       </div>
         <button id='clear' onClick={()=> setResult('')} className='span-two'>AC</button>
@@ -30,7 +38,7 @@ function Container() {
         <button name='='  onClick={handleClick}>+</button>
         <button name='.'  onClick={handleClick}>.</button>
         <button name='0'  onClick={handleClick}>0</button>
-        <button  name='' onClick={()=> setResult(eval(result).toString())} className='span-two'>=</button>
+        <button  name='' onClick={evaluate} className='span-two'>=</button>
     </div>
   )
 }
