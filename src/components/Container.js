@@ -35,7 +35,7 @@ function Container() {
         <button  name='7' onClick={handleClick}>7</button>
         <button name='8'  onClick={handleClick}>8</button>
         <button name='9'  onClick={handleClick}>9</button>
-        <button name='='  onClick={handleClick}>+</button>
+        <button name='+'  onClick={handleClick}>+</button>
         <button name='.'  onClick={handleClick}>.</button>
         <button name='0'  onClick={handleClick}>0</button>
         <button  name='' onClick={evaluate} className='span-two'>=</button>
