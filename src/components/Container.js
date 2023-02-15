@@ -14,7 +14,7 @@ function Container() {
         <div className="current-operand">{result}</div>
       </div>
         <button id='clear' onClick={()=> setResult('')} className='span-two'>AC</button>
-        <button id='backspace' onClick={()=> setResult(result.slice(0, result.length-1))}>C</button>
+        <button id='backspace' onClick={()=> setResult(result.slice(0, -1))}>C</button>
         <button name='÷'  onClick={handleClick}>&divide;</button>
         <button name='1'  onClick={handleClick}>1</button>
         <button name='2'  onClick={handleClick}>2</button>
@@ -30,7 +30,7 @@ function Container() {
         <button name='='  onClick={handleClick}>+</button>
         <button name='.'  onClick={handleClick}>.</button>
         <button name='0'  onClick={handleClick}>0</button>
-        <button  name='' onClick={handleClick} className='span-two'>=</button>
+        <button  name='' onClick={()=> setResult(eval(result).toString())} className='span-two'>=</button>
     </div>
   )
 }
